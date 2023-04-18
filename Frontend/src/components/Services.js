@@ -4,19 +4,12 @@ import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png';
 
 const Services = () => {
-    return (
-        <div
-            style={{
-            backgroundImage: `url(${bg})`,
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat',
-            backgroundPositionY: -90,
-            height: 2140,
-            width: 1520,
-        }}>
-            <div>
-                // Navbar
-                <div className='flex flex-row container mx-auto px-10 mb-8 mt-10 gap-4'>
+    return (       
+        <div class="bg-cover bg-center h-screen" style={{ backgroundImage: `url(${bg})` }}>
+            <div className='flex flex-col'>
+
+                {/* Navbar */}
+                <div className='flex flex-row items-center container mx-auto px-10 mb-8 mt-10 gap-7'>
                     <div className='md:float-left block'>
                         <Link href='/'>
                             <span className='cursor-pointer font-bold text-4xl text-white'>
@@ -25,8 +18,7 @@ const Services = () => {
                         </Link>
                     </div>
                     To perform Pooja in Sambalpur
-                    
-                    <div className='flex flex-row'>
+                    <div className='flex flex-row items-center gap-4'>
                         <div className='flex flex-col'>
                             My Pandit Preference
                             <select className='' name='' id=''>
@@ -45,14 +37,12 @@ const Services = () => {
                             </Link>
                         </div>
                     </div>
-
                     <div class="relative gap-2">
                         <input class="block w-full py-2 pr-10 pl-4 mrleading-tight rounded-lg border border-gray-300 bg-white focus:outline-none focus:bg-white focus:border-gray-500" type="text" placeholder="Search..." />
                         <button class="absolute top-0 right-0 px-4 py-2 bg-gray-300 hover:bg-gray-400 rounded-lg">
                             Search
                         </button>
                     </div>
-
                     <div className='flex flex-row justify-end gap-5 mt-3 ml-10'>
                         <button className='pr-7 hover:opacity-75 shadow-lg bg-black text-white shadow-black box-border h-7 w-20 pl-5 pb-3 rounded-md'>
                             Login
@@ -61,13 +51,12 @@ const Services = () => {
                             Register
                         </button>
                     </div>
-
                 </div>
                 
-                {/* <div>
+                <div className='flex flex-row mx-auto px-10 mb-8 mt-10 gap-9'>
                     <div>Sidebar</div>
                     <div>Pooja to perform</div>
-                </div> */}
+                </div> 
             </div>
         </div>
     )
