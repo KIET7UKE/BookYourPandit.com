@@ -13,6 +13,7 @@ import mail from '../assets/mail.png';
 import message from '../assets/message.png';
 import web from '../assets/web.png';
 import contact from '../assets/contact.png';
+import { Link } from 'react-router-dom'
 
 function Home() {
   return (
@@ -84,9 +85,11 @@ function Home() {
           <option value='5'>Gujrati</option>
         </select>
         <div>
-          <button className='font-serif font-bold shadow-lg hover:opacity-75 bg-black text-white  bg-blend-multiply box-border h-9 w-52 rounded-md'>
-            View All Services
-          </button>
+          <Link to='/services'>
+            <button className='font-serif font-bold shadow-lg hover:opacity-75 bg-black text-white  bg-blend-multiply box-border h-9 w-52 rounded-md'>
+              View All Services
+            </button>
+          </Link>
         </div>
       </div>
       <div className='max-w-screen-xl pl-60 mt-28'>
