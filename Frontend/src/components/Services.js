@@ -1,8 +1,29 @@
 
 import bg from '../assets/bg.jpg';
-import optimus from '../assets/optimus.png';
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png';
+
+import optimus from '../assets/optimus.png';
+import pooja_1 from '../assets/pooja_1.png'
+import pooja_2 from '../assets/pooja_2.png'
+import pooja_3 from '../assets/pooja_3.png'
+import marriage from '../assets/marriage.png'
+import Pandakkal from '../assets/Pandakkal.png'
+import Annaprasana from '../assets/Annaprasana.png'
+import Naamkaran from '../assets/Naamkaran.png'
+import Aksarabhyasam from '../assets/Aksarabhyasam.png'
+import Seemantham from '../assets/Seemantham.png'
+import VastuShaanti from '../assets/VastuShaanti.png'
+import Fix_Muhurath from '../assets/Fix_Muhurath.png'
+import Sashtiapthapoorthi from '../assets/Sashtiapthapoorthi.png'
+import Upanayanam from '../assets/Upanayanam.png'
+import KarnaVedha from '../assets/KarnaVedha.png'
+import Bhima_Ratha_Shanthi from '../assets/Bhima_Ratha_Shanthi.png'
+import GrihaPravesham from '../assets/GrihaPravesham.png'
+import Saraswati from '../assets/Saraswati.png'
+import Ganapathi_Pooja from '../assets/Ganapathi_Pooja.png'
+import Lakshmi_Pooja from '../assets/Lakshmi_Pooja.png'
+import Punyahavachanam from '../assets/Punyahavachanam.png'
 
 const Services = () => {
     return (       
@@ -81,32 +102,151 @@ const Services = () => {
                     {/* <div class="bg-gray-200 h-64 w-64 flex items-center justify-center bg-cover bg-center" style="background-image: url('your-image-url-here')">
 
                     </div> */}
-                    <div className='flex-1 grid grid-cols-7 gap-7'>
-                        Pooja to perform  
-                        <br />
-                        <div className="bg-gray-100 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
-                        <div className="bg-gray-200 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
-                        <div className="bg-gray-300 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
-                        <div className="bg-gray-400 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
-                        <div className="bg-gray-500 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
+                    <div className='flex-1 grid grid-cols-7 gap-7 '>
+                        <h1>Pooja to perform</h1>  
+
+                        <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden" style={{ backgroundImage: `url(${pooja_1})`, backgroundSize: 'cover' }}>
+                            <div className="absolute inset-0 bg-black opacity-0 transition duration-300 hover:opacity-30"></div>
+                            <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-4 w-full">
+                                <h2 className="text-white font-bold text-sm">Pooja_1</h2>
+                            </div>
+                        </div>
+
+                        <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden" style={{ backgroundImage: `url(${pooja_2})`, backgroundSize: 'cover' }}>
+                            <div className="absolute inset-0 bg-black opacity-0 transition duration-300 hover:opacity-30"></div>
+                            <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-4 w-full">
+                                <h2 className="text-white font-bold text-sm">Pooja_2</h2>
+                            </div>
+                        </div>
+
+                        <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden" style={{ backgroundImage: `url(${pooja_3})`, backgroundSize: 'cover' }}>
+                            <div className="absolute inset-0 bg-black opacity-0 transition duration-300 hover:opacity-30"></div>
+                            <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-4 w-full">
+                                <h2 className="text-white font-bold text-sm">Pooja_3</h2>
+                            </div>
+                        </div>
+
+                        <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden" style={{ backgroundImage: `url(${marriage})`, backgroundSize: 'cover' }}>
+                            <div className="absolute inset-0 bg-black opacity-0 transition duration-300 hover:opacity-30"></div>
+                            <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-4 w-full">
+                                <h2 className="text-white font-bold text-sm">Marriage</h2>
+                            </div>
+                        </div>
+
+                        <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden" style={{ backgroundImage: `url(${Pandakkal})`, backgroundSize: 'cover' }}>
+                            <div className="absolute inset-0 bg-black opacity-0 transition duration-300 hover:opacity-30"></div>
+                            <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-4 w-full">
+                                <h2 className="text-white font-bold text-sm">Pandakkal</h2>
+                            </div>
+                        </div>
+
+                        <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden" style={{ backgroundImage: `url(${Annaprasana})`, backgroundSize: 'cover' }}>
+                            <div className="absolute inset-0 bg-black opacity-0 transition duration-300 hover:opacity-30"></div>
+                            <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-4 w-full">
+                                <h2 className="text-white font-bold text-sm">Annaprasana</h2>
+                            </div>
+                        </div>
+
+                        <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden" style={{ backgroundImage: `url(${Naamkaran})`, backgroundSize: 'cover' }}>
+                            <div className="absolute inset-0 bg-black opacity-0 transition duration-300 hover:opacity-30"></div>
+                            <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-4 w-full">
+                                <h2 className="text-white font-bold text-sm">Naamkaran</h2>
+                            </div>
+                        </div>
+
+                        <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden" style={{ backgroundImage: `url(${Aksarabhyasam})`, backgroundSize: 'cover' }}>
+                            <div className="absolute inset-0 bg-black opacity-0 transition duration-300 hover:opacity-30"></div>
+                            <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-4 w-full">
+                                <h2 className="text-white font-bold text-sm">Aksarabhyasam</h2>
+                            </div>
+                        </div>
+
+                        <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden" style={{ backgroundImage: `url(${Seemantham})`, backgroundSize: 'cover' }}>
+                            <div className="absolute inset-0 bg-black opacity-0 transition duration-300 hover:opacity-30"></div>
+                            <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-4 w-full">
+                                <h2 className="text-white font-bold text-sm">Seemantham</h2>
+                            </div>
+                        </div>
+
+                        <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden" style={{ backgroundImage: `url(${VastuShaanti})`, backgroundSize: 'cover' }}>
+                            <div className="absolute inset-0 bg-black opacity-0 transition duration-300 hover:opacity-30"></div>
+                            <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-4 w-full">
+                                <h2 className="text-white font-bold text-sm">VastuShaanti</h2>
+                            </div>
+                        </div>
+
+                        <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden" style={{ backgroundImage: `url(${Fix_Muhurath})`, backgroundSize: 'cover' }}>
+                            <div className="absolute inset-0 bg-black opacity-0 transition duration-300 hover:opacity-30"></div>
+                            <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-4 w-full">
+                                <h2 className="text-white font-bold text-sm">Fix Muhurath</h2>
+                            </div>
+                        </div>
+
+                        <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden" style={{ backgroundImage: `url(${Sashtiapthapoorthi})`, backgroundSize: 'cover' }}>
+                            <div className="absolute inset-0 bg-black opacity-0 transition duration-300 hover:opacity-30"></div>
+                            <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-4 w-full">
+                                <h2 className="text-white font-bold text-sm">Sashtiapthapoorthi</h2>
+                            </div>
+                        </div>
+
+                        <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden" style={{ backgroundImage: `url(${Upanayanam})`, backgroundSize: 'cover' }}>
+                            <div className="absolute inset-0 bg-black opacity-0 transition duration-300 hover:opacity-30"></div>
+                            <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-4 w-full">
+                                <h2 className="text-white font-bold text-sm">Upanayanam</h2>
+                            </div>
+                        </div>
+                        
+                        <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden" style={{ backgroundImage: `url(${KarnaVedha})`, backgroundSize: 'cover' }}>
+                            <div className="absolute inset-0 bg-black opacity-0 transition duration-300 hover:opacity-30"></div>
+                            <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-4 w-full">
+                                <h2 className="text-white font-bold text-sm">KarnaVedha</h2>
+                            </div>
+                        </div>
+
+                        <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden" style={{ backgroundImage: `url(${Bhima_Ratha_Shanthi})`, backgroundSize: 'cover' }}>
+                            <div className="absolute inset-0 bg-black opacity-0 transition duration-300 hover:opacity-30"></div>
+                            <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-4 w-full">
+                                <h2 className="text-white font-bold text-sm">Bhima Ratha Shanthi</h2>
+                            </div>
+                        </div>
+
+                        <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden" style={{ backgroundImage: `url(${GrihaPravesham})`, backgroundSize: 'cover' }}>
+                            <div className="absolute inset-0 bg-black opacity-0 transition duration-300 hover:opacity-30"></div>
+                            <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-4 w-full">
+                                <h2 className="text-white font-bold text-sm">Griha Pravesham</h2>
+                            </div>
+                        </div>
+
+                        <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden" style={{ backgroundImage: `url(${Saraswati})`, backgroundSize: 'cover' }}>
+                            <div className="absolute inset-0 bg-black opacity-0 transition duration-300 hover:opacity-30"></div>
+                            <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-4 w-full">
+                                <h2 className="text-white font-bold text-sm">Saraswati Pooja</h2>
+                            </div>
+                        </div>
+
+                        <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden" style={{ backgroundImage: `url(${Ganapathi_Pooja})`, backgroundSize: 'cover' }}>
+                            <div className="absolute inset-0 bg-black opacity-0 transition duration-300 hover:opacity-30"></div>
+                            <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-4 w-full">
+                                <h2 className="text-white font-bold text-sm">Ganapathi Pooja</h2>
+                            </div>
+                        </div>
+
+                        <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden" style={{ backgroundImage: `url(${Lakshmi_Pooja})`, backgroundSize: 'cover' }}>
+                            <div className="absolute inset-0 bg-black opacity-0 transition duration-300 hover:opacity-30"></div>
+                            <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-4 w-full">
+                                <h2 className="text-white font-bold text-sm">Lakshmi Pooja</h2>
+                            </div>
+                        </div>
+
+                        <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden" style={{ backgroundImage: `url(${Punyahavachanam})`, backgroundSize: 'cover' }}>
+                            <div className="absolute inset-0 bg-black opacity-0 transition duration-300 hover:opacity-30"></div>
+                            <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-4 w-full">
+                                <h2 className="text-white font-bold text-sm">Punyahavachanam</h2>
+                            </div>
+                        </div>
+                        {/* <div className="bg-gray-500 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
                         <div className="bg-gray-600 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
-                        <div className="bg-gray-700 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
-                        <div className="bg-gray-800 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
-                        <div className="bg-gray-900 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
-                        <div className="bg-gray-800 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
-                        <div className="bg-gray-700 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
-                        <div className="bg-gray-600 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
-                        <div className="bg-gray-500 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
-                        <div className="bg-gray-400 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
-                        <div className="bg-gray-300 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
-                        <div className="bg-gray-200 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
-                        <div className="bg-gray-100 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
-                        <div className="bg-gray-200 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
-                        <div className="bg-gray-300 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
-                        <div className="bg-gray-400 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
-                        <div className="bg-gray-500 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
-                        <div className="bg-gray-600 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
-                        <div className="bg-gray-700 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div>
+                        <div className="bg-gray-700 h-16" style={{ backgroundImage: `url(${optimus})`, backgroundSize: 'cover' }}></div> */}
                     </div> 
                 </div>   
             </div>
