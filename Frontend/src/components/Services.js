@@ -31,7 +31,7 @@ const Services = () => {
 
                 {/* Navbar */} 
                 <div className="relative">
-                    <div className='absolute z-5 bg-white opacity-25 flex flex-row items-center container mx-auto px-10 py-14 mb-8 mt-10 gap-7 '></div>
+                    <div className='absolute z-5 bg-white opacity-25 rounded-lg flex flex-row items-center container mx-auto px-10 py-14 mb-8 mt-10 gap-7 '></div>
                     <div className='z-10 flex flex-row items-center container mx-auto px-10 py-5 mb-8 mt-10 gap-7 '>
                         <div className='md:float-left block'>
                             <Link href='/'>
