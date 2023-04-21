@@ -26,18 +26,16 @@ import Punyahavachanam from '../assets/Punyahavachanam.png'
 
 const Services = () => {
     return (       
-        <div className="bg-cover bg-center h-screen" style={{ backgroundImage: `url(${bg})` }}>
+        <div className="bg-cover bg-center" style={{ backgroundImage: `url(${bg})` }}>
             <div className='flex flex-col'>
 
                 {/* Navbar */} 
                 <div className="relative">
                     <div className='absolute z-5 bg-white opacity-25 rounded-lg flex flex-row items-center container mx-auto px-10 py-14 mb-8 mt-10 gap-7 '></div>
                     <div className='z-10 flex flex-row items-center container mx-auto px-10 py-5 mb-8 mt-10 gap-7 '>
-                        <div className='md:float-left block'>
-                            <Link href='/'>
-                                <span className='cursor-pointer font-bold text-4xl text-white relative'>
-                                    <img src={logo} alt='' width={200} />
-                                </span>
+                        <div className='md:float-left block relative cursor-pointer'>
+                            <Link to='/'>
+                                <img src={logo} alt='' width={200} />
                             </Link>
                         </div>
                         <div className='relative'>To perform Pooja in Sambalpur</div>
