@@ -1,7 +1,8 @@
 
+import React, { useState } from 'react'
 import bg from '../assets/bg.jpg';
-import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png';
+import { Link } from 'react-router-dom'
 
 // import pooja_1 from '../assets/pooja_1.png'
 // import pooja_2 from '../assets/pooja_2.png'
@@ -25,21 +26,34 @@ import Lakshmi_Pooja from '../assets/Lakshmi_Pooja.png'
 import Punyahavachanam from '../assets/Punyahavachanam.png'
 
 const Services = () => {
+
     return (       
         <div className="bg-cover bg-center" style={{ backgroundImage: `url(${bg})` }}>
             <div className='flex flex-col'>
 
                 {/* Navbar */} 
                 <div className="relative">
-                    <div className='absolute z-5 bg-white opacity-25 rounded-lg flex flex-row items-center container mx-auto px-10 py-14 mb-8 mt-10 gap-7 '></div>
-                    <div className='z-10 flex flex-row items-center container mx-auto px-10 py-5 mb-8 mt-10 gap-7 '>
+                    <div className='absolute flex flex-col md:flex-row z-5 bg-white opacity-25 rounded-lg items-center container mx-auto px-10 py-14 mb-8 mt-10 gap-7 '></div> 
+                    <div className='z-10 flex flex-col md:flex-row items-center container justify-between mx-auto px-10 py-5 mb-8 mt-10 gap-7 '>
+                        
                         <div className='md:float-left block relative cursor-pointer'>
                             <Link to='/'>
                                 <img src={logo} alt='' width={200} />
                             </Link>
                         </div>
-                        <div className='relative'>To perform Pooja in Sambalpur</div>
-                        <div className='flex flex-row items-center gap-4 relative ml-6'>
+
+                        <div className='flex flex-col md:flex-row sm:items-center gap-4 relative ml-6'>
+                            <div className='flex flex-col relative '>
+                                <div className='mb-2'>Pooja Location</div>
+                                <select className='rounded-lg focus:outline-none' name='' id=''>
+                                    <option value='1'>Select</option>
+                                    <option value='2'>Cuttack</option>
+                                    <option value='3'>Bhubaneswar</option>
+                                    <option value='4'>Sambalpur</option>
+                                    <option value='5'>Burla</option>
+                                </select>
+                            </div>
+
                             <div className='flex flex-col relative'>
                                 <div className='mb-2'>My Pandit Preference</div>
                                 <select className='rounded-lg' name='' id=''>
@@ -50,6 +64,7 @@ const Services = () => {
                                     <option value='5'>Gujrati</option>
                                 </select>
                             </div>
+                            
                             <div className="relative ml-6">
                                 <Link to='/services'>
                                     <button className='font-sans font-semibold shadow-lg hover:opacity-75 bg-black text-white bg-blend-multiply box-border py-2 px-4 rounded-md cursor-pointer'>
@@ -58,12 +73,14 @@ const Services = () => {
                                 </Link>
                             </div>
                         </div>
+
                         <div className="relative gap-2 ml-6">
                             <input class="block w-full py-2 pr-10 pl-4 mrleading-tight rounded-lg border border-gray-300 bg-white focus:outline-none focus:bg-white focus:border-gray-500" type="text" placeholder="Search..." />
                             <button class="absolute top-0 right-0 px-4 py-2 bg-gray-300 hover:bg-gray-400 rounded-lg">
                                 Search
                             </button>
                         </div>
+
                         <div className='flex flex-row justify-end gap-5 ml-10'>
                             <button className='hover:opacity-75 shadow-lg bg-black text-white shadow-black box-border py-2 px-4 pb-3 rounded-md relative'>
                                 Login
@@ -72,10 +89,11 @@ const Services = () => {
                                 Register
                             </button>
                         </div>
+
                     </div>
                 </div>
  
-                <div className='flex flex-row justify-between mx-auto px-10 mb-8 mt-10 gap-9 '>
+                <div className='flex flex-col md:flex-row justify-between mx-auto px-10 mb-8 mt-10 gap-9 '>
                     {/* Sidebar */}
                     <div className='w-64 bg-gray-100 rounded-lg opacity-75 border-4 border-black'>
                         <ul class="py-4 cursor-pointer">
@@ -96,7 +114,8 @@ const Services = () => {
                     </div>
 
                     {/* Poojas to perform */}
-                    <div className='flex-1 grid grid-cols-6 gap-7 '>
+                    <div className='flex-1 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-7 '>
+                    {/* <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"></div> */}
                         <p class="text-lg font-medium text-gray-800 font-sans">
                             Poojas to perform
                         </p> 
@@ -221,7 +240,13 @@ const Services = () => {
                         </div>
 
                     </div> 
-                </div>   
+                    <button class="block md:hidden fixed bottom-0 right-0 m-4 bg-gray-500 text-white p-2 rounded" id="toggle-sidebar">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M2 5a1 1 0 011-1h14a1 1 0 010 2H3a1 1 0 01-1-1zM1 10a1 1 0 011-1h14a1 1 0 110 2H2a1 1 0 01-1-1zM3 15a1 1 0 100 2h14a1 1 0 100-2H3z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>    
+
             </div>
         </div>
     )
