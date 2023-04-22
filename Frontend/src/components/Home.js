@@ -73,7 +73,7 @@ function Home() {
         <select className='col-start-2' name='' id=''>
           <option value='1'>Select</option>
           <option value='2'>Cuttack</option>
-          <option value='3'>Bhubneswar</option>
+          <option value='3'>Bhubaneswar</option>
           <option value='4'>Sambalpur</option>
           <option value='5'>Burla</option>
         </select>
