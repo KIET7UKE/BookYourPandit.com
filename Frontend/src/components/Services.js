@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import bg from '../assets/bg.jpg';
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom'
@@ -25,7 +25,25 @@ import Ganapathi_Pooja from '../assets/Ganapathi_Pooja.png'
 import Lakshmi_Pooja from '../assets/Lakshmi_Pooja.png'
 import Punyahavachanam from '../assets/Punyahavachanam.png'
 
+import { useNavigate } from 'react-router-dom'
+import { GoogleLogout } from 'react-google-login'
+const clientId="1019777784248-emfneg8cbjj6n2et9p77evdre820ar53.apps.googleusercontent.com"
+
 const Services = () => {
+
+    const navigate = useNavigate()
+    const [isLoggedOut, setIsLoggedOut] = useState(false);
+  
+    const onSuccess = () => {
+      console.log("Log out successfull!")
+      setIsLoggedOut(true);
+    }
+  
+    useEffect(() => {
+       if (isLoggedOut) {
+          navigate('/login')
+       }  
+    }, [isLoggedOut])
 
     return (       
         <div className="bg-cover bg-center" style={{ backgroundImage: `url(${bg})` }}>
@@ -81,13 +99,27 @@ const Services = () => {
                             </button>
                         </div>
 
-                        <div className='flex flex-row justify-end gap-5 ml-10'>
-                            <button className='hover:opacity-75 shadow-lg bg-black text-white shadow-black box-border py-2 px-4 pb-3 rounded-md relative'>
-                                Login
-                            </button>
+                        {/* <Link to='/login'>
                             <button className='hover:opacity-75 shadow-lg bg-black text-white shadow-black box-border py-2 px-4 rounded-md relative'>
-                                Register
+                                Logout
                             </button>
+                        </Link> */}
+
+                        <div className="shadow-2xl">
+                            <GoogleLogout
+                                clientId={clientId}
+                                render={renderProps => (
+                                <button 
+                                    type="button"
+                                    className='hover:opacity-75 shadow-lg bg-black text-white shadow-black box-border py-2 px-4 rounded-md relative'
+                                    onClick={renderProps.onClick}
+                                    disabled={renderProps.disabled}
+                                >
+                                    Logout
+                                </button>
+                                )}
+                                onLogoutSuccess={onSuccess}
+                            />
                         </div>
 
                     </div>
