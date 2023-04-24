@@ -30,10 +30,10 @@ function Home() {
       <div className='flex flex-row pl-7 pt-5 justify-between'>
         <img src={logo} alt='' width={200} />
         <div className='flex flex-row justify-end mr-10 pr-10 gap-5 mt-3'>
-          <button className='pr-7 hover:opacity-75 shadow-lg bg-black text-white shadow-black box-border h-7 w-20 pl-5 pb-3 rounded-md'>
+        <button className='hover:opacity-75 shadow-lg bg-black text-white shadow-black box-border py-2 px-4 pb-3 rounded-md relative'>
             Login
           </button>
-          <button className='pr-10  hover:opacity-75 shadow-lg bg-black text-white shadow-black box-border h-7 w-20 pr-2 pb-2 rounded-md'>
+          <button className='hover:opacity-75 shadow-lg bg-black text-white shadow-black box-border py-2 px-4 rounded-md relative'>
             Register
           </button>
         </div>
