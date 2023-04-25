@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useState, useEffect } from 'react'
 import bg from '../assets/bg.jpg';
 import logo from '../assets/logo.png';
 import line from '../assets/line.png';
@@ -13,8 +14,28 @@ import mail from '../assets/mail.png';
 import message from '../assets/message.png';
 import web from '../assets/web.png';
 import contact from '../assets/contact.png';
+import { Link } from 'react-router-dom'
+
+import { useNavigate } from 'react-router-dom'
+import { GoogleLogout } from 'react-google-login'
+const clientId="1019777784248-emfneg8cbjj6n2et9p77evdre820ar53.apps.googleusercontent.com"
 
 function Home() {
+
+  const navigate = useNavigate()
+  const [isLoggedOut, setIsLoggedOut] = useState(false);
+
+  const onSuccess = () => {
+    console.log("Log out successfull!")
+    setIsLoggedOut(true);
+  }
+
+  useEffect(() => {
+     if (isLoggedOut) {
+        navigate('/login')
+     }  
+  }, [isLoggedOut])
+
   return (
     <div
       style={{
@@ -28,12 +49,35 @@ function Home() {
       <div className='flex flex-row pl-7 pt-5 justify-between'>
         <img src={logo} alt='' width={200} />
         <div className='flex flex-row justify-end mr-10 pr-10 gap-5 mt-3'>
-          <button className='pr-7 hover:opacity-75 shadow-lg bg-black text-white shadow-black box-border h-7 w-20 pl-5 pb-3 rounded-md'>
-            Login
-          </button>
-          <button className='pr-10  hover:opacity-75 shadow-lg bg-black text-white shadow-black box-border h-7 w-20 pr-2 pb-2 rounded-md'>
-            Register
-          </button>
+          <Link to='/login'>
+            <button className='hover:opacity-75 shadow-lg bg-black text-white shadow-black box-border py-2 px-4 rounded-md relative'>
+              Login
+            </button>
+          </Link>
+
+          {/* <Link to='/login'>
+            <button className='hover:opacity-75 shadow-lg bg-black text-white shadow-black box-border py-2 px-4 rounded-md relative'>
+              Logout
+            </button>
+          </Link> */}
+
+          <div className="shadow-2xl">
+            <GoogleLogout
+                clientId={clientId}
+                render={renderProps => (
+                  <button 
+                    type="button"
+                    className='hover:opacity-75 shadow-lg bg-black text-white shadow-black box-border py-2 px-4 rounded-md relative'
+                    onClick={renderProps.onClick}
+                    disabled={renderProps.disabled}
+                  >
+                    Logout
+                  </button>
+                )}
+                onLogoutSuccess={onSuccess}
+            />
+          </div>
+
         </div>
       </div>
       <div className='flex flex-col place-items-center pt-48'>
@@ -72,7 +116,7 @@ function Home() {
         <select className='col-start-2' name='' id=''>
           <option value='1'>Select</option>
           <option value='2'>Cuttack</option>
-          <option value='3'>Bhubneswar</option>
+          <option value='3'>Bhubaneswar</option>
           <option value='4'>Sambalpur</option>
           <option value='5'>Burla</option>
         </select>
@@ -84,9 +128,11 @@ function Home() {
           <option value='5'>Gujrati</option>
         </select>
         <div>
-          <button className='font-serif font-bold shadow-lg hover:opacity-75 bg-black text-white  bg-blend-multiply box-border h-9 w-52 rounded-md'>
-            View All Services
-          </button>
+          <Link to='/services'>
+            <button className='font-serif font-bold shadow-lg hover:opacity-75 bg-black text-white  bg-blend-multiply box-border h-9 w-52 rounded-md'>
+              View All Services
+            </button>
+          </Link>
         </div>
       </div>
       <div className='max-w-screen-xl pl-60 mt-28'>
