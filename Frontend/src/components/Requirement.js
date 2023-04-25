@@ -72,7 +72,7 @@ function Requirement() {
                     type='text'
                   /> (optional)
                 </div>
-                <div className='ml-3 mt-3'><input type="radio"/>  I Need Harivara To fix my Date and Time</div>
+                <div className='ml-3 mt-3'><input type="radio"/>  I Need BookYourPandit To fix my Date and Time</div>
               </div>
             </div>
           </div>
