@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import logo from '../assets/logo.png'
+import logo1 from '../assets/logo1.png'
 import { useNavigate } from 'react-router-dom'
 import { GoogleLogin } from 'react-google-login'
 import { FcGoogle } from 'react-icons/fc'
@@ -41,7 +41,7 @@ function Login() {
   return (
     <div className='flex justify-start items-center flex-col h-screen'>
         <div className="relative w-full h-full">
-            <video 
+            <video
             src={panditBath}
             type="video/mp4"
             loop
@@ -53,16 +53,16 @@ function Login() {
 
             <div className="absolute flex flex-col justify-center items-center top-0 right-0 left-0 bottom-0 backdrop-brightness-50">
                 <div className="flex items-center justify-center p-5">
-                    <img src={logo} className="ml-3 bg-white bg-opacity-25 p-9  rounded-lg" alt="logo" />
+                    <img src={logo1} className="ml-3 scale-50  rounded-lg" alt="logo" />
                 </div>
 
-                <div className="shadow-2xl">
+                <div className="shadow-2xl mb-10">
                     <GoogleLogin
                         clientId={clientId}
                         render={renderProps => (
                         <button
                             type="button"
-                            className="bg-mainColor flex justify-center outline-none items-center p-3 mt-9 rounded-lg cursor-pointer opacity-70 bg-black text-white hover:opacity-80"
+                            className="bg-mainColor flex justify-center outline-none items-center p-3 rounded-lg cursor-pointer opacity-70 bg-black text-white hover:opacity-80"
                             onClick={renderProps.onClick}
                             disabled={renderProps.disabled}
                         >
