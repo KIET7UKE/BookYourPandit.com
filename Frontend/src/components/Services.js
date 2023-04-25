@@ -149,13 +149,16 @@ const Services = () => {
                     {/* <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"></div> */}
                         <p class="text-lg font-medium text-gray-800 font-sans">
                             Poojas to perform
-                        </p> 
-
-                        <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden cursor-pointer hover:transform hover:scale-110 transition-all duration-700 ease-in-out" style={{ backgroundImage: `url(${Ganapathi_Pooja})`, backgroundSize: 'cover' }}>
+                        </p>
+                        <div>
+                            <Link to='/products'>
+                        <button className="h-40 w-40 object-cover relative rounded-lg overflow-hidden cursor-pointer hover:transform hover:scale-110 transition-all duration-700 ease-in-out" style={{ backgroundImage: `url(${Ganapathi_Pooja})`, backgroundSize: 'cover' }}>
                             <div className="absolute inset-0 bg-black opacity-0 transition duration-300 hover:opacity-30"></div>
                             <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 p-4 w-full">
                                 <h2 className="text-white font-bold text-sm">Ganapathi Pooja</h2>
                             </div>
+                        </button>
+                            </Link>
                         </div>
 
                         <div className="h-40 w-40 object-cover relative rounded-lg overflow-hidden cursor-pointer hover:transform hover:scale-110 transition-all duration-700 ease-in-out" style={{ backgroundImage: `url(${Lakshmi_Pooja})`, backgroundSize: 'cover' }}>

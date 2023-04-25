@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect }  from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
+import { useNavigate } from 'react-router-dom'
+import { GoogleLogout } from 'react-google-login'
+const clientId="1019777784248-emfneg8cbjj6n2et9p77evdre820ar53.apps.googleusercontent.com"
 
 function Navbar() {
+
+  const navigate = useNavigate()
+    const [isLoggedOut, setIsLoggedOut] = useState(false);
+  
+    const onSuccess = () => {
+      console.log("Log out successfull!")
+      setIsLoggedOut(true);
+    }
+  
+    useEffect(() => {
+       if (isLoggedOut) {
+        navigate('/login')
+       }  
+    }, [isLoggedOut])
+
+
   return (
     <div className='relative'>
       <div className='absolute z-5 bg-white opacity-25 flex flex-row items-center container mx-auto px-10 py-14 mt-10 gap-7 '></div>
@@ -56,12 +75,22 @@ function Navbar() {
           </button>
         </div>
         <div className='flex flex-row justify-end gap-5 mt-10 ml-20'>
-          <button className='hover:opacity-75 shadow-lg bg-black text-white shadow-black box-border py-2 px-4 pb-3 rounded-md relative'>
-            Login
-          </button>
-          <button className='hover:opacity-75 shadow-lg bg-black text-white shadow-black box-border py-2 px-4 rounded-md relative'>
-            Register
-          </button>
+          <div className="shadow-2xl">
+                            <GoogleLogout
+                                clientId={clientId}
+                                render={renderProps => (
+                                <button 
+                                    type="button"
+                                    className='hover:opacity-75 shadow-lg bg-black text-white shadow-black box-border py-2 px-4 rounded-md relative'
+                                    onClick={renderProps.onClick}
+                                    disabled={renderProps.disabled}
+                                >
+                                    Logout
+                                </button>
+                                )}
+                                onLogoutSuccess={onSuccess}
+                            />
+                        </div>
         </div>
       </div>
     </div>

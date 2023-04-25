@@ -48,11 +48,7 @@ function Home() {
       <div className='flex flex-row pl-7 pt-5 justify-between'>
         <img src={logo} alt='' width={200} />
         <div className='flex flex-row justify-end mr-10 pr-10 gap-5 mt-3'>
-          <Link to='/login'>
-            <button className='hover:opacity-75 shadow-lg bg-black text-white shadow-black box-border py-2 px-4 rounded-md relative'>
-              Login
-            </button>
-          </Link>
+          
 
           {/* <Link to='/login'>
             <button className='hover:opacity-75 shadow-lg bg-black text-white shadow-black box-border py-2 px-4 rounded-md relative'>
