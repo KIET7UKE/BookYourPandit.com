@@ -1,3 +1,4 @@
+
 import React, { useRef, useState } from 'react';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
@@ -11,9 +12,66 @@ import message from '../assets/message.png';
 import web from '../assets/web.png';
 import contact from '../assets/contact.png';
 
+import axios from 'axios';
+import StripeCheckout from 'react-stripe-checkout';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+// const key = 'pk_test_51MHZ0CSJeOoq1oiAlJKPkFYdhcaAjJ3obmqDBbV74euxoejBkIsh7yRNNpS0eehDQIxLm2ElwON8v6eA6BXTjo0M00zyAaCvIn'
+
+const MySwal = withReactContent(Swal)
+
 function Requirement() {
+
+  const key = 'pk_test_51MHZ0CSJeOoq1oiAlJKPkFYdhcaAjJ3obmqDBbV74euxoejBkIsh7yRNNpS0eehDQIxLm2ElwON8v6eA6BXTjo0M00zyAaCvIn'
+
   const [date, setDate] = useState('');
   const dateInputRef = useRef(null);
+
+  const [ product, setProduct ] = useState({
+    name: 'Ganapathi',
+    price: 3000,
+  })
+
+  const priceForStripe = product.price * 100
+
+  const handleSuccess = () => {
+    MySwal.fire({
+      icon: 'success',
+      title: 'Payment was successful',
+      time: 4000,
+    })
+  }
+
+  const handleFailure = () => {
+    MySwal.fire({
+      icon: 'error',
+      title: 'Payment was not successful',
+      time: 4000,
+    })
+  }
+
+  const payNow = async token => {
+    try {
+      const response = await axios ({
+        url:'http://localhost:/5000/payment',
+        method:'post',
+        data: {
+          amount: product.price * 100,
+          token,
+        }
+      })
+      if (response.status === 200) {
+          handleSuccess()
+          console.log('Your payment was successful')
+      } else {
+          handleFailure()
+      }
+    }
+    catch (error) {
+        console.log(error)
+    }
+  }
 
   const handleChange = (e) => {
     setDate(e.target.value);
@@ -128,13 +186,33 @@ function Requirement() {
           </div>
 
             {/* Stripe Integration */}
-          <div>
+          {/* <div>
             <Link to=''>
               <button className='flex flex-row text-white bg-red-700 hover:bg-green-600 ml-[6rem]  font-semibold justify-center rounded-md w-[13rem] h-[3rem] mt-3'>
                 <div className='mt-2'>Proceed To Payment</div>
+                <StripeCheckout 
+                  stripeKey=''
+                  label="Pay Now"
+                  name="Pay with Credit Card"
+                  billingAddress
+                  shippingAddress
+                  amount={priceForStripe}
+                  description={`Your total is Rs.${product.price}`}
+                />
               </button>
             </Link>
-          </div>
+          </div> */}
+          <StripeCheckout 
+            stripeKey={key}
+            label="Proceed To Payment"
+            name="Pay with Credit Card"
+            billingAddress
+            shippingAddress
+            amount={priceForStripe}
+            className='text-white bg-red-700 mt-10'
+            description={`Your total is Rs.${product.price}`}
+            token={payNow}
+          />
         </div>
       </div>
 
@@ -342,4 +420,4 @@ function Requirement() {
   );
 }
 
-export default Requirement;
+export default Requirement
