@@ -19,7 +19,7 @@ function Login() {
         // const { name, googleId, imageUrl } = response.profileObj
         setIsAuthenticated(true);
     }
-    
+
     const onFailure = (response) => {
         console.log("LOGIN FAILED! response: ", response)
         setIsAuthenticated(false);
@@ -28,7 +28,7 @@ function Login() {
     useEffect(() => {
         function start() {
           gapi.client.init({
-            clientId: clientId, 
+            clientId: clientId,
             scope:" "
          })
          if (isAuthenticated) {
