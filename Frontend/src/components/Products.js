@@ -47,8 +47,7 @@ function Products() {
               <h1 className=' text-green-300 text-xs'>(10 Customer Reviews)</h1>
             </div>
             <h1 className='flex justify-center gap-1 mb-3 mr-[34rem] text-white '>
-              <span className='font-semibold text-white'>Price:</span>Rs
-              2,100.00
+              <span className='font-semibold text-white'>Price:</span>₹ 2,100.00
             </h1>
             <div className='flex flex-col w-[48rem] ml-44 bg-white border-2 rounded-lg divide-y-2 divide-y divide-zinc-800'>
               <div className='mr-3 ml-3 mt-1 mb-2'>

@@ -25,7 +25,7 @@ app.post('/payment', async (req, res) => {
     await Stripe.charges.create({
       source: token.id,
       amount,
-      currency: 'usd',
+      currency: 'inr',
     });
     status = 'success';
   } catch (error) {

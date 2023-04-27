@@ -88,7 +88,7 @@ function CheckoutPage() {
 
                 <div className='flex flex-row ml-5 mt-1'>
                   <div className='flex flex-col'>
-                    <div className='font-bold'>Rs 2,600.00</div>
+                    <div className='font-bold'>₹ 2,600.00</div>
                     <button className='flex justify-center rounded-md text-white font-semibold' onClick={handleCLick} style={{backgroundColor: color ? "green" : "red"}}>Select</button>
                   </div>
                 </div>

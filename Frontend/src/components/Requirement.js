@@ -13,13 +13,11 @@ import web from '../assets/web.png';
 import contact from '../assets/contact.png';
 
 import axios from 'axios';
+import Swal from 'sweetalert2';
 import StripeCheckout from 'react-stripe-checkout';
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
+import withReactContent from 'sweetalert2-react-content';
 
-// const key = 'pk_test_51MHZ0CSJeOoq1oiAlJKPkFYdhcaAjJ3obmqDBbV74euxoejBkIsh7yRNNpS0eehDQIxLm2ElwON8v6eA6BXTjo0M00zyAaCvIn'
-
-const MySwal = withReactContent(Swal)
+const MySwal = withReactContent(Swal);
 
 function Requirement() {
 
@@ -28,50 +26,45 @@ function Requirement() {
   const [date, setDate] = useState('');
   const dateInputRef = useRef(null);
 
-  const [ product, setProduct ] = useState({
-    name: 'Ganapathi',
-    price: 3000,
-  })
-
-  const priceForStripe = product.price * 100
+  const [product, setProduct] = useState({
+    name: 'Headphone',
+    price: 2600,
+  });
+  const priceForStripe = product.price * 100;
 
   const handleSuccess = () => {
     MySwal.fire({
       icon: 'success',
       title: 'Payment was successful',
       time: 4000,
-    })
-  }
-
+    });
+  };
   const handleFailure = () => {
     MySwal.fire({
       icon: 'error',
       title: 'Payment was not successful',
       time: 4000,
-    })
-  }
+    });
+  };
 
   const payNow = async token => {
     try {
-      const response = await axios ({
-        url:'http://localhost:/5000/payment',
-        method:'post',
+      const response = await axios({
+        url: 'http://localhost:5000/payment',
+        method: 'post',
         data: {
           amount: product.price * 100,
           token,
-        }
-      })
+        },
+      });
       if (response.status === 200) {
-          handleSuccess()
-          console.log('Your payment was successful')
-      } else {
-          handleFailure()
+        handleSuccess();
       }
+    } catch (error) {
+      handleFailure();
+      console.log(error);
     }
-    catch (error) {
-        console.log(error)
-    }
-  }
+  };
 
   const handleChange = (e) => {
     setDate(e.target.value);
@@ -181,7 +174,7 @@ function Requirement() {
               <div className='flex flex-row justify-end mr-6 font-bold'>
                 <div><input type="radio"/> Pay full amount</div>
               </div>
-              <div className='border-t-2 border-b-2 border-t-zinc-400 border-b-zinc-400'>Total: <span className='font-semibold ml-[13rem]'>Rs 2,600.00</span></div>
+              <div className='border-t-2 border-b-2 border-t-zinc-400 border-b-zinc-400'>Total: <span className='font-semibold ml-[13rem]'>₹ 2,600.00</span></div>
             </div>
           </div>
 
@@ -202,6 +195,7 @@ function Requirement() {
               </button>
             </Link>
           </div> */}
+
           <StripeCheckout 
             stripeKey={key}
             label="Proceed To Payment"
@@ -209,8 +203,8 @@ function Requirement() {
             billingAddress
             shippingAddress
             amount={priceForStripe}
-            className='text-white bg-red-700 mt-10'
-            description={`Your total is Rs.${product.price}`}
+            className='mt-10'
+            description={`Your total is ₹ ${product.price}`}
             token={payNow}
           />
         </div>
