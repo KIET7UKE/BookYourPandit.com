@@ -1,3 +1,4 @@
+
 import React, { useRef, useState } from 'react';
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
@@ -12,21 +13,23 @@ import web from '../assets/web.png';
 import contact from '../assets/contact.png';
 
 import axios from 'axios';
-import StripeCheckout from 'react-stripe-checkout';
 import Swal from 'sweetalert2';
+import StripeCheckout from 'react-stripe-checkout';
 import withReactContent from 'sweetalert2-react-content';
 
-function Requirement() {
-  const MySwal = withReactContent(Swal);
+const MySwal = withReactContent(Swal);
 
-  const key =
-    'pk_test_51MJ1KbSGbbQt54rGM28QRcnhWVFDkEU0gRjIheIL60I94Vhbz6sRrDg7fpXohbPWeikb0WmJb9GizgGmuiQgw6he00Avo3tYgR';
+function Requirement() {
+
+  const key = 'pk_test_51MHZ0CSJeOoq1oiAlJKPkFYdhcaAjJ3obmqDBbV74euxoejBkIsh7yRNNpS0eehDQIxLm2ElwON8v6eA6BXTjo0M00zyAaCvIn'
+
+  const [date, setDate] = useState('');
+  const dateInputRef = useRef(null);
 
   const [product, setProduct] = useState({
-    name: 'Ganapathi',
-    price: 3000,
+    name: 'Headphone',
+    price: 2600,
   });
-
   const priceForStripe = product.price * 100;
 
   const handleSuccess = () => {
@@ -36,7 +39,7 @@ function Requirement() {
       time: 4000,
     });
   };
-
+  
   const handleFailure = () => {
     MySwal.fire({
       icon: 'error',
@@ -45,10 +48,10 @@ function Requirement() {
     });
   };
 
-  const payNow = async (token) => {
+  const payNow = async token => {
     try {
       const response = await axios({
-        url: 'http://localhost:/5000/payment',
+        url: 'http://localhost:5000/payment',
         method: 'post',
         data: {
           amount: product.price * 100,
@@ -57,27 +60,22 @@ function Requirement() {
       });
       if (response.status === 200) {
         handleSuccess();
-        console.log('Your payment was successful');
-      } else {
-        handleFailure();
       }
     } catch (error) {
+      handleFailure();
       console.log(error);
     }
   };
-
-  const [date, setDate] = useState('');
-  const dateInputRef = useRef(null);
 
   const handleChange = (e) => {
     setDate(e.target.value);
   };
 
-  const [color, setColor] = useState(false);
+  const [color, setColor] = useState(false)
 
-  const handleCLick = () => {
-    setColor(!color);
-  };
+    const handleCLick = () => {
+        setColor(!color)
+    } 
 
   return (
     <div
@@ -96,10 +94,10 @@ function Requirement() {
         <div className='flex flex-col '>
           <div className='flex flex-row'>
             <Link to='/checkoutpage'>
-              <button className='bg-red-600 hover:bg-green-600 flex flex-row rounded-md px-3 h-6 text-md'>
-                <img src={leftarrow} alt='' className='w-3 h-3 mt-1.5 mr-2' />
-                <div>Back</div>
-              </button>
+            <button className='bg-red-600 hover:bg-green-600 flex flex-row rounded-md px-3 h-6 text-md'>
+              <img src={leftarrow} alt='' className='w-3 h-3 mt-1.5 mr-2' />
+              <div>Back</div>
+            </button>
             </Link>
             <div className='ml-[13rem] mb-2 font-semibold text-xl text-white'>
               Your Requirements
@@ -109,30 +107,24 @@ function Requirement() {
             <div className='flex flex-row divide-x mr-[10rem] divide-amber-950 divide-x-2'>
               <div className='flex flex-col'>
                 <div className='ml-3'>
-                  <input type='radio' /> Select date for pooja
+                <input type="radio"/>  Select date for pooja
                   <input
-                    className='ml-3 mt-3 rounded-md'
+                  className='ml-3 mt-3 rounded-md'
                     type='date'
                     onChange={handleChange}
                     ref={dateInputRef}
                     placeholder={date}
                   />
-                  <button
-                    className='bg-red-700 hover:bg-green-600 text-white ml-3 w-[9rem] rounded-md'
-                    onClick={handleCLick}
-                    style={{ backgroundColor: color ? 'green' : 'red' }}>
-                    Check Availability
-                  </button>
+                  <button className='bg-red-700 hover:bg-green-600 text-white ml-3 w-[9rem] rounded-md' onClick={handleCLick} style={{backgroundColor: color ? "green" : "red"}}>Check Availability</button>
                 </div>
                 <div className='ml-3'>
                   Time Preference
-                  <input className='ml-3 mt-3 rounded-md' type='text' />{' '}
-                  (optional)
+                  <input
+                  className='ml-3 mt-3 rounded-md'
+                    type='text'
+                  /> (optional)
                 </div>
-                <div className='ml-3 mt-3'>
-                  <input type='radio' /> I Need BookYourPandit To fix my Date
-                  and Time
-                </div>
+                <div className='ml-3 mt-3'><input type="radio"/>  I Need BookYourPandit To fix my Date and Time</div>
               </div>
             </div>
           </div>
@@ -170,46 +162,50 @@ function Requirement() {
               <div className='flex flex-row'>
                 <div>Package Name</div>
                 <div className='ml-[4.8rem] font-bold font-sans'>
-                  Economy : ( 1 Priest + Pooja Samagries )
+                Economy : ( 1 Priest + Pooja Samagries )
                 </div>
               </div>
               <div className='flex flex-row'>
                 <div>Date & Time</div>
                 <div className='ml-[4.1rem] font-bold font-sans'>
-                  Fix by BookYourPandit Team
+                Fix by BookYourPandit Team
                 </div>
               </div>
 
               <div className='flex flex-row justify-end mr-6 font-bold'>
-                <div>
-                  <input type='radio' /> Pay full amount
-                </div>
+                <div><input type="radio"/> Pay full amount</div>
               </div>
-              <div className='border-t-2 border-b-2 border-t-zinc-400 border-b-zinc-400'>
-                Total:{' '}
-                <span className='font-semibold ml-[13rem]'>Rs 2,600.00</span>
-              </div>
+              <div className='border-t-2 border-b-2 border-t-zinc-400 border-b-zinc-400'>Total: <span className='font-semibold ml-[13rem]'>₹ 2,600.00</span></div>
             </div>
           </div>
 
-          {/* Stripe Integration */}
+            {/* Stripe Integration */}
           {/* <div>
             <Link to=''>
               <button className='flex flex-row text-white bg-red-700 hover:bg-green-600 ml-[6rem]  font-semibold justify-center rounded-md w-[13rem] h-[3rem] mt-3'>
                 <div className='mt-2'>Proceed To Payment</div>
+                <StripeCheckout 
+                  stripeKey=''
+                  label="Pay Now"
+                  name="Pay with Credit Card"
+                  billingAddress
+                  shippingAddress
+                  amount={priceForStripe}
+                  description={`Your total is Rs.${product.price}`}
+                />
               </button>
             </Link>
           </div> */}
 
-          <StripeCheckout
+          <StripeCheckout 
             stripeKey={key}
-            label='Proceed To Payment'
-            name='Pay with Credit Card'
+            label="Proceed To Payment"
+            name="Pay with Credit Card"
             billingAddress
             shippingAddress
             amount={priceForStripe}
-            className='text-white bg-red-700 mt-10'
-            description={`Your total is Rs.${product.price}`}
+            className='mt-10'
+            description={`Your total is ₹ ${product.price}`}
             token={payNow}
           />
         </div>
@@ -419,4 +415,4 @@ function Requirement() {
   );
 }
 
-export default Requirement;
+export default Requirement
