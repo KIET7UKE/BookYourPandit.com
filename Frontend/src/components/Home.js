@@ -17,14 +17,31 @@ import { Link } from 'react-router-dom'
 
 import { useNavigate } from 'react-router-dom'
 import { GoogleLogout } from 'react-google-login'
+import Swal from 'sweetalert2';
 const clientId="1019777784248-emfneg8cbjj6n2et9p77evdre820ar53.apps.googleusercontent.com"
 
 function Home() {
+
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
 
   const navigate = useNavigate()
   const [isLoggedOut, setIsLoggedOut] = useState(false);
 
   const onSuccess = () => {
+    Toast.fire({
+      icon: 'success',
+      title: 'Log out successfully'
+    })
     console.log("Log out successfull!")
     setIsLoggedOut(true);
   }
@@ -348,7 +365,7 @@ function Home() {
         </p>
       </div>
 
-      <div className=' mt-24 h-72 bg-red-700'>
+      <div className=' mt-24 h-72 bg-yellow-600'>
         <div className='grid grid-cols-4 pt-10 text-white font-sans gap-2'>
           <h1>Contact Info</h1>
           <h1>Main Links</h1>
@@ -412,7 +429,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className='h-80 bg-red-950'>
+      <div className='h-80 bg-yellow-950'>
         <div className='grid grid-cols-6 pt-5 text-white font-sans'>
           <h1>Cuttack</h1>
           <h1>Bhubaneswar</h1>

@@ -180,7 +180,7 @@ function Products() {
         </div>
       </div>
       
-      <div className='mt-24 h-72 bg-red-700'>
+      <div className='mt-24 h-72 bg-yellow-600'>
         <div className='grid grid-cols-4 pt-10 text-white font-sans gap-2'>
           <h1 className='ml-[9rem]'>Contact Info</h1>
           <h1 className='ml-[9rem]'>Main Links</h1>
@@ -244,7 +244,7 @@ function Products() {
           </div>
         </div>
       </div>
-      <div className='h-[22rem] bg-red-950'>
+      <div className='h-[22rem] bg-yellow-950'>
         <div className='grid grid-cols-6 pt-10 text-white font-sans ml-4'>
           <h1 className='ml-14'>Cuttack</h1>
           <h1 className='ml-10'>Bhubaneswar</h1>

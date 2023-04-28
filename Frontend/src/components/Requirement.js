@@ -23,7 +23,7 @@ function Requirement() {
     'pk_test_51MJ1KbSGbbQt54rGM28QRcnhWVFDkEU0gRjIheIL60I94Vhbz6sRrDg7fpXohbPWeikb0WmJb9GizgGmuiQgw6he00Avo3tYgR';
 
     const [product, setProduct] = useState({
-      name: 'Headphone',
+      name: 'Pandits',
       price: 2600,
     });
     const priceForStripe = product.price * 100;
@@ -74,14 +74,15 @@ function Requirement() {
     setColor(!color);
   };
 
+
   return (
     <div
       style={{
         backgroundImage: `url(${bg})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'contain',
-        backgroundPositionY: -90,
-        height: 1040,
+        backgroundPositionY: -50,
+        height: 1340,
         width: 1520,
       }}>
       <Navbar />
@@ -140,7 +141,7 @@ function Requirement() {
               Order Summary
             </div>
           </div>
-          <div className='flex flex-row bg-white rounded-md w-[25rem] h-[21rem] mt-1 border-4 border-yellow-950'>
+          <div className='flex flex-row bg-white rounded-md w-[25rem] h-[22rem] mt-1 border-4 border-yellow-950'>
             <div className='flex flex-col ml-3 mt-2 gap-3'>
               <div className='flex flex-row'>
                 <div className=''>City</div>
@@ -175,11 +176,16 @@ function Requirement() {
                 </div>
               </div>
 
-              <div className='flex flex-row justify-end mr-6 font-bold'>
+              <div className='flex flex-row justify-end mr-6 gap-[6rem] font-bold'>
                 <div>
+                  <input type='radio' /> Pay Advance
+                  <div className='ml-8'>(1000/-)</div>
+                </div>
+                <div className=''>
                   <input type='radio' /> Pay full amount
                 </div>
               </div>
+              
               <div className='border-t-2 border-b-2 border-t-zinc-400 border-b-zinc-400'>
                 Total:{' '}
                 <span className='font-semibold ml-[13rem]'>Rs 2,600.00</span>
@@ -211,7 +217,7 @@ function Requirement() {
       </div>
 
       {/* Footer */}
-      <div className='mt-24 h-72 bg-red-700'>
+      <div className='mt-24 h-72 bg-yellow-600'>
         <div className='grid grid-cols-4 pt-10 text-white font-sans gap-2'>
           <h1 className='ml-[9rem]'>Contact Info</h1>
           <h1 className='ml-[9rem]'>Main Links</h1>
@@ -275,7 +281,7 @@ function Requirement() {
           </div>
         </div>
       </div>
-      <div className='h-[22rem] bg-red-950'>
+      <div className='h-[22rem] bg-yellow-950'>
         <div className='grid grid-cols-6 pt-10 text-white font-sans ml-4'>
           <h1 className='ml-14'>Cuttack</h1>
           <h1 className='ml-10'>Bhubaneswar</h1>

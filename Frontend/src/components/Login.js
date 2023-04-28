@@ -5,15 +5,32 @@ import { GoogleLogin } from 'react-google-login'
 import { FcGoogle } from 'react-icons/fc'
 import { gapi } from 'gapi-script'
 import panditBath from '../assets/pandit_bath.mp4'
+import Swal from 'sweetalert2';
 
 const clientId="1019777784248-emfneg8cbjj6n2et9p77evdre820ar53.apps.googleusercontent.com"
 
 function Login() {
 
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+
     const navigate = useNavigate()
     const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     const onSuccess = (response) => {
+        Toast.fire({
+            icon: 'success',
+            title: 'Signed in successfully'
+          })
         console.log("LOGIN SUCCESS! Current user: ", response.profileObj)
         // localStorage.setItem('user', JSON.stringify(response.profileObj))
         // const { name, googleId, imageUrl } = response.profileObj

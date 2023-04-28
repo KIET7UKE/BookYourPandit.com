@@ -8,7 +8,7 @@ import contact from '../assets/contact.png';
 function Footer() {
   return (
     <div>
-      <div className=' mt-24 h-72 bg-red-700'>
+      <div className=' mt-24 h-72 bg-yellow-600'>
         <div className='grid grid-cols-4 pt-10 text-white font-sans gap-2'>
           <h1>Contact Info</h1>
           <h1>Main Links</h1>
@@ -72,7 +72,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className='h-80 bg-red-950'>
+      <div className='h-80 bg-yellow-950'>
         <div className='grid grid-cols-6 pt-5 text-white font-sans'>
           <h1>Cuttack</h1>
           <h1>Bhubaneswar</h1>

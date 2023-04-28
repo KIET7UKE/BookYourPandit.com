@@ -23,6 +23,11 @@ import Saraswati from '../assets/Saraswati.png'
 import Ganapathi_Pooja from '../assets/Ganapathi_Pooja.png'
 import Lakshmi_Pooja from '../assets/Lakshmi_Pooja.png'
 import Punyahavachanam from '../assets/Punyahavachanam.png'
+import whitearrow from '../assets/whitearrow.png';
+import mail from '../assets/mail.png';
+import message from '../assets/message.png';
+import web from '../assets/web.png';
+import contact from '../assets/contact.png';
 
 import { useNavigate } from 'react-router-dom'
 import { GoogleLogout } from 'react-google-login'
@@ -282,6 +287,206 @@ const Services = () => {
                 </div>    
 
             </div>
+
+            <div className='mt-24 h-72 bg-yellow-600'>
+        <div className='grid grid-cols-4 pt-10 text-white font-sans gap-2'>
+          <h1 className='ml-[9rem]'>Contact Info</h1>
+          <h1 className='ml-[9rem]'>Main Links</h1>
+          <h1 className='ml-[9rem]'>Policy Info</h1>
+          <h1 className='ml-[9rem]'>Sponsors</h1>
+          <div className='grid gap-2 text-sm text-justify justify-end mr-8'>
+            <h1 className='grid grid-flow-col gap-2'>
+              <img src={mail} alt='' width={25} /> info@bookyourpandit.com
+            </h1>
+            <h1 className='grid grid-flow-col gap-2'>
+              <img src={web} alt='' width={25} />
+              www.bookyourpandit.com
+            </h1>
+            <h1 className='grid grid-flow-col gap-2 mr-12'>
+              <img src={message} alt='' width={25} />
+              Send Your Enquiry
+            </h1>
+            <h1 className='grid grid-flow-col gap-2 mr-24'>
+              <img src={contact} alt='' width={25} />
+              Contact Us
+            </h1>
+          </div>
+          <div className='grid gap-2 text-sm text-justify ml-36'>
+            <button className='grid grid-flow-col mr-28'>
+              <img src={whitearrow} alt='' width={15} /> Pooja Services
+            </button>
+            <button className='grid grid-flow-col mr-28'>
+              <img src={whitearrow} alt='' width={15} />
+              Login / Register
+            </button>
+            <button className='grid grid-flow-col mr-40'>
+              <img src={whitearrow} alt='' width={15} />
+              Sitemap
+            </button>
+            <button className='grid grid-flow-col mr-28'>
+              <img src={whitearrow} alt='' width={15} />
+              Hindu Wedding Planners
+            </button>
+          </div>
+          <div className='grid gap-2 text-sm text-justify ml-36'>
+            <button className='grid grid-flow-col mr-32'>
+              <img src={whitearrow} alt='' width={15} />
+              how we work
+            </button>
+            <button className='grid grid-flow-col mr-32'>
+              <img src={whitearrow} alt='' width={15} />
+              Privacy Policy
+            </button>
+            <button className='grid grid-flow-col mr-32'>
+              <img src={whitearrow} alt='' width={15} />
+              Terms of use
+            </button>
+            <button className='grid grid-flow-col mr-44'>
+              <img src={whitearrow} alt='' width={15} />
+              FAQ
+            </button>
+            <button className='grid grid-flow-col mr-28'>
+              <img src={whitearrow} alt='' width={15} />
+              Cancellation & Refund Policy
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className='h-[22rem] bg-yellow-950'>
+        <div className='grid grid-cols-6 pt-10 text-white font-sans ml-4'>
+          <h1 className='ml-14'>Cuttack</h1>
+          <h1 className='ml-10'>Bhubaneswar</h1>
+          <h1 className='ml-14'>Sambalpur</h1>
+          <h1 className='ml-14'>Burla</h1>
+          <h1 className='ml-14'>Bargarh</h1>
+          <h1 className='ml-14'>Balangir</h1>
+          <div className='mt-3 ml-3'>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Hindi Pandits in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Telugu Purohits in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Kannada Pujari in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Marathi Guruji in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Malayalam Pandit in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Odiya Purohits in Bangalore
+            </h1>
+          </div>
+          <div className='mt-3'>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Hindi Pandits in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Telugu Purohits in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Kannada Pujari in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Marathi Guruji in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Malayalam Pandit in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Odiya Purohits in Bangalore
+            </h1>
+          </div>
+          <div className='mt-3'>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Hindi Pandits in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Telugu Purohits in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Kannada Pujari in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Marathi Guruji in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Malayalam Pandit in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Odiya Purohits in Bangalore
+            </h1>
+          </div>
+          <div className='mt-3'>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Hindi Pandits in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Telugu Purohits in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Kannada Pujari in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Marathi Guruji in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Malayalam Pandit in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Odiya Purohits in Bangalore
+            </h1>
+          </div>
+          <div className='mt-3'>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Hindi Pandits in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Telugu Purohits in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Kannada Pujari in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Marathi Guruji in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Malayalam Pandit in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Odiya Purohits in Bangalore
+            </h1>
+          </div>
+          <div className='mt-3'>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Hindi Pandits in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Telugu Purohits in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Kannada Pujari in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Marathi Guruji in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Malayalam Pandit in Bangalore
+            </h1>
+            <h1 className='dark:text-gray-300 font-thin'>
+              Odiya Purohits in Bangalore
+            </h1>
+          </div>
+        </div>
+        <div className='mb-3'>
+          <h1 className='mt-24 text-white font-semibold text-xs flex flex-row justify-center'>
+            BookYourPandit.com © 2023. All Rights Reserved.
+          </h1>
+        </div>
+      </div>
         </div>
     )
 }
