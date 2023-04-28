@@ -22,49 +22,44 @@ function Requirement() {
   const key =
     'pk_test_51MJ1KbSGbbQt54rGM28QRcnhWVFDkEU0gRjIheIL60I94Vhbz6sRrDg7fpXohbPWeikb0WmJb9GizgGmuiQgw6he00Avo3tYgR';
 
-  const [product, setProduct] = useState({
-    name: 'Ganapathi',
-    price: 3000,
-  });
-
-  const priceForStripe = product.price * 100;
-
-  const handleSuccess = () => {
-    MySwal.fire({
-      icon: 'success',
-      title: 'Payment was successful',
-      time: 4000,
+    const [product, setProduct] = useState({
+      name: 'Headphone',
+      price: 2600,
     });
-  };
-
-  const handleFailure = () => {
-    MySwal.fire({
-      icon: 'error',
-      title: 'Payment was not successful',
-      time: 4000,
-    });
-  };
-
-  const payNow = async (token) => {
-    try {
-      const response = await axios({
-        url: 'http://localhost:/5000/payment',
-        method: 'post',
-        data: {
-          amount: product.price * 100,
-          token,
-        },
+    const priceForStripe = product.price * 100;
+  
+    const handleSuccess = () => {
+      MySwal.fire({
+        icon: 'success',
+        title: 'Payment was successful',
+        time: 4000,
       });
-      if (response.status === 200) {
-        handleSuccess();
-        console.log('Your payment was successful');
-      } else {
+    };
+    const handleFailure = () => {
+      MySwal.fire({
+        icon: 'error',
+        title: 'Payment was not successful',
+        time: 4000,
+      });
+    };
+    const payNow = async token => {
+      try {
+        const response = await axios({
+          url: 'http://localhost:5000/payment',
+          method: 'post',
+          data: {
+            amount: product.price * 100,
+            token,
+          },
+        });
+        if (response.status === 200) {
+          handleSuccess();
+        }
+      } catch (error) {
         handleFailure();
+        console.log(error);
       }
-    } catch (error) {
-      console.log(error);
-    }
-  };
+    };
 
   const [date, setDate] = useState('');
   const dateInputRef = useRef(null);
