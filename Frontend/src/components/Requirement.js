@@ -39,6 +39,7 @@ function Requirement() {
       time: 4000,
     });
   };
+  
   const handleFailure = () => {
     MySwal.fire({
       icon: 'error',
