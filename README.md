@@ -1,3 +1,25 @@
+# <p align="center"> BookyourPandit.com is ready for Open-Source</p>
+ ![Screenshot (1452)](https://github.com/KIET7UKE/BookYourPandit.com/assets/76551267/488b7692-ceb5-41ee-94e2-232d3f4eeee4)
+
+<p align="center">About the project:</p>
+<p align="center">
+    <img src="https://img.shields.io/github/issues/KIET7UKE/BookYourPandit.com"> 
+    <img src="https://img.shields.io/github/issues-pr/KIET7UKE/BookYourPandit.com">
+    <img src="https://img.shields.io/github/forks/KIET7UKE/BookYourPandit.com">
+    <img src="https://img.shields.io/github/stars/KIET7UKE/BookYourPandit.com">
+    <img src="https://img.shields.io/github/license/KIET7UKE/BookYourPandit.com">
+</p>
+
+<p align="center">Tech Stack:</p>
+<p align="center">
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"> 
+    <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white">
+    <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white">
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+    <img src="https://img.shields.io/badge/Stripe-626CD9?style=for-the-badge&logo=Stripe&logoColor=white">
+    <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge">
+</p>
+
 # BookYourPandit.com 🙏
 
 BookYourPandit.com is a website where you can easily find and book pandits online for your home pujas and religious ceremonies. This platform simplifies the booking process by providing a user-friendly interface where you can search for pandits, view their profiles, and book their services online.🌟
