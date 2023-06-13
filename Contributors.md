@@ -1,4 +1,4 @@
-Project Maintainers
+Project Maintainer
 - [Sahil Sharma](https://github.com/KIET7UKE)
 
 Contributors
