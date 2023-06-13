@@ -14,6 +14,8 @@ BookYourPandit.com is a website where you can easily find and book pandits onlin
 
 - **Online Payments**: BookYourPandit.com allows you to make payments securely and conveniently through the website. You can complete the entire booking process, including payment, without the need for any offline transactions. 💳
 
+<img src="https://media.tenor.com/MDEgOaoAAroAAAAC/bhool-bhulaiyaa-akshay-kumar-aditya-smile-at-asrani.gif" width="400" height="300"/>
+
 ## Tech Stack Used 💻
 
 BookYourPandit.com is built using the following technologies:
@@ -32,6 +34,8 @@ To run BookYourPandit.com locally, follow these steps:
 - Node.js (version 18.16.0 or higher)
 - npm (version 9.5.1 or higher)
 
+<img src="https://media.tenor.com/JrZOQBkTdlQAAAAd/happy.gif" width="300" height="300"/>
+
 ### Frontend 🖥️
 
 1. Clone the repository to your local machine.
@@ -47,6 +51,9 @@ To run BookYourPandit.com locally, follow these steps:
 3. Start the backend server: `nodemon server.js`.
 
 Now you should have both the frontend and backend servers running locally. 🚀
+
+<img src="https://media.tenor.com/SS_YqhEMYq8AAAAC/bhool-bhulaiyaa-akshay-kumar-aditya.gif" width="400" height="300"/>
+
 
 ## How to Get Started 🚀
 
@@ -139,6 +146,8 @@ git push origin YourBranchName
 
 If you encounter any issues or have any questions or suggestions regarding BookYourPandit.com, please feel free to contact our support team at [support@bookyourpandit.com](mailto:support@bookyourpandit.com). We appreciate your feedback and will strive to assist you as promptly as possible. 📧
 
+<img src="https://media.tenor.com/7P6NlpkZ4dIAAAAC/friends-joeyfriends.gif" width="400" height="300"/>
+
 ## License 📄
 
 This project is licensed under the [MIT License](license). 📜
@@ -146,3 +155,7 @@ This project is licensed under the [MIT License](license). 📜
 ---
 
 Thank you for choosing BookYourPandit.com. We hope this platform enhances your experience of booking pandits for your religious ceremonies.🙏✨
+
+<img src="https://media.tenor.com/IlpDflxljGYAAAAC/akshay-kumar-de-dana-dan.gif" width="500" height="300"/>
+
+
