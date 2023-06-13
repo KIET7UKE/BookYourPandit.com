@@ -160,7 +160,7 @@ git push origin YourBranchName
 
 <table>
   <tr>
-<td align="center"><a href="https://github.com/KIET7UKE"><img src="https://avatars.githubusercontent.com/u/76551267?s=400&u=d0db905a4f5ccf33dfe9aa841ea689036b094cce&v=4" width="100px;" alt=""/><br /><sub><b>Sahil Sharma</b></sub></a></td>
+<td align="center"><a href="https://github.com/KIET7UKE"><img src="https://avatars.githubusercontent.com/u/76551267?s=400&u=d0db905a4f5ccf33dfe9aa841ea689036b094cce&v=4" width="300px;" alt=""/><br /><sub><b>Sahil Sharma</b></sub></a></td>
  </tr>
 </table>
 
@@ -168,7 +168,14 @@ git push origin YourBranchName
 
 If you encounter any issues or have any questions or suggestions regarding BookYourPandit.com, please feel free to contact our support team at [support@bookyourpandit.com](mailto:support@bookyourpandit.com). We appreciate your feedback and will strive to assist you as promptly as possible. 📧
 
+## Thanks to all Contributors 💪 
+
+Thanks a lot for spending your time helping PetMe grow. Thanks a lot! Keep rocking 🍻
+
+[![Contributors](https://contrib.rocks/image?repo=KIET7UKE/BookYourPandit.com)](https://github.com/KIET7UKE/BookYourPandit.com/graphs/contributors)
+
 <img src="https://media.tenor.com/7P6NlpkZ4dIAAAAC/friends-joeyfriends.gif" width="400" height="300"/>
+
 
 ## License 📄
 
