@@ -170,7 +170,7 @@ If you encounter any issues or have any questions or suggestions regarding BookY
 
 ## Thanks to all Contributors 💪 
 
-Thanks a lot for spending your time helping PetMe grow. Thanks a lot! Keep rocking 🍻
+Thanks a lot for spending your time helping BookYourPandit.com grow. Thanks a lot! Keep rocking 🍻
 
 [![Contributors](https://contrib.rocks/image?repo=KIET7UKE/BookYourPandit.com)](https://github.com/KIET7UKE/BookYourPandit.com/graphs/contributors)
 
