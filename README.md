@@ -141,7 +141,7 @@ If you encounter any issues or have any questions or suggestions regarding BookY
 
 ## License 📄
 
-This project is licensed under the [MIT License](LICENSE). 📜
+This project is licensed under the [MIT License](license). 📜
 
 ---
 
