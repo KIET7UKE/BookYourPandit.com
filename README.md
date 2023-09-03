@@ -63,7 +63,7 @@ To run BookYourPandit.com locally, follow these steps:
 1. Clone the repository to your local machine.
 2. Navigate to the `frontend` folder: `cd frontend`.
 3. Install the required dependencies: `npm install --force`.
-4. Start the frontend server: `npm start`.
+4. Start the frontend server: `npm run dev`.
 5. Open your web browser and visit `http://localhost:3000` to access the BookYourPandit.com website. 🌐
 
 ### Backend 💻
