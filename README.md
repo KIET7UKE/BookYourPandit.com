@@ -42,7 +42,7 @@ BookYourPandit.com is a website where you can easily find and book pandits onlin
 
 BookYourPandit.com is built using the following technologies:
 
-- **Frontend**: React.js
+- **Frontend**: React.js & Tailwind CSS
 - **Backend**: Node.js, Express
 - **Database**: MongoDB
 - **Payment Integration**: Stripe API
