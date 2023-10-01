@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import Home from '../src/Pages/Home';
+import Home from './Pages/Home';
 import fetchUser from './Utils/FetchUser';
-import Login from '../src/Pages/Login';
-import Services from '../src/Pages/Services';
-import Products from '../src/Pages/Products';
-import CheckoutPage from '../src/Pages/CheckoutPage';
-import Requirement from '../src/Pages/Requirement';
+import Login from './Pages/Login';
+import Services from './Pages/Services';
+import Products from './Pages/Products';
+import CheckoutPage from './Pages/CheckoutPage';
+import Requirement from './Pages/Requirement';
 
 function App() {
   const navigate = useNavigate();

@@ -1,0 +1,1 @@
+// Here we declares all the global functions of api
