@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import Home from './Pages/Home';
-import fetchUser from './Utils/FetchUser';
+import fetchUser from './Utils/fetchUser';
 import Login from './Pages/Login';
 import Services from './Pages/Services';
 import Products from './Pages/Products';
