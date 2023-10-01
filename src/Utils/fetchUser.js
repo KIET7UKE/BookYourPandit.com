@@ -1,4 +1,4 @@
-const FetchUser = () => {
+const fetchUser = () => {
   const userInfo =
     localStorage.getItem('user') !== 'undefined'
       ? JSON.parse(localStorage.getItem('user'))
@@ -6,4 +6,4 @@ const FetchUser = () => {
   return userInfo;
 };
 
-export default FetchUser
+export default fetchUser
