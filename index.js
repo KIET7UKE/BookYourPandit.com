@@ -18,4 +18,4 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(errorMiddleware);
 
-app.listen(PORT, () => console.log('Server is running on PORT ' + PORT));
+app.listen(PORT, () => console.log('Server is running on PORT : ' + PORT));
