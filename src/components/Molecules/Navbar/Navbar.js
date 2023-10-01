@@ -1,6 +1,6 @@
 import React, { useState, useEffect }  from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.png';
+import logo from '../../../assets/logo.png';
 import { useNavigate } from 'react-router-dom'
 import { GoogleLogout } from 'react-google-login'
 const clientId="1019777784248-emfneg8cbjj6n2et9p77evdre820ar53.apps.googleusercontent.com"

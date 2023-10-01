@@ -1,9 +1,9 @@
 import React from 'react'
-import whitearrow from '../assets/whitearrow.png';
-import mail from '../assets/mail.png';
-import message from '../assets/message.png';
-import web from '../assets/web.png';
-import contact from '../assets/contact.png';
+import whitearrow from '../../../assets/whitearrow.png';
+import mail from '../../../assets/mail.png';
+import message from '../../../assets/message.png';
+import web from '../../../assets/web.png';
+import contact from '../../../assets/contact.png';
 
 function Footer() {
   return (

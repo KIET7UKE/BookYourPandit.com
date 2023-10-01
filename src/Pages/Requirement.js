@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
-import Navbar from './Navbar';
+import Navbar from '../components/Molecules/Navbar/Navbar';
 import { Link } from 'react-router-dom';
-import Footer from './Footer';
+import Footer from '../components/Molecules/Footer/Footer';
 import bg from '../assets/bg.jpg';
 import leftarrow from '../assets/leftarrow.png';
 import greenarrow from '../assets/greenarrow.png';
