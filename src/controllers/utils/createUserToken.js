@@ -1,14 +1,13 @@
-import jwt from "jsonwebtoken";
+const jwt = require("jsonwebtoken");
 let JWT_SECRET = process.env.JWT_SECRET || "";
 async function createUserToken(user) {
     try {
-        const token = jwt.sign(Object.assign({}, user), JWT_SECRET);
+        const token = jwt.sign( {user}, JWT_SECRET);
         return token;
     }
     catch (error) {
-        console.log("error :", error);
         return false;
     }
 }
 
-module.exports = { createUserToken };
+    module.exports = createUserToken;
