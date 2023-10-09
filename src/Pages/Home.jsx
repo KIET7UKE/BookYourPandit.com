@@ -16,7 +16,7 @@ import contact from '../assets/contact.png';
 import { Link } from 'react-router-dom'
 
 import { useNavigate } from 'react-router-dom'
-import { GoogleLogout } from 'react-google-login'
+// import { GoogleLogout } from 'react-google-login'
 import Swal from 'sweetalert2';
 const clientId="1019777784248-emfneg8cbjj6n2et9p77evdre820ar53.apps.googleusercontent.com"
 
@@ -64,6 +64,11 @@ function Home() {
       }}>
       <div className='flex flex-row pl-7 pt-5 justify-between'>
         <img src={logo} alt='' width={200} />
+        <div className='headerLinks'>
+          <a href='/signup'><button class className='font-serif font-bold shadow-lg hover:opacity-75 bg-black text-white  bg-blend-multiply box-border h-9 w-20 rounded-md' href="/signup">Signup</button></a>
+          <a href='/login'><button className='font-serif font-bold shadow-lg hover:opacity-75 bg-black text-white  bg-blend-multiply box-border h-9 w-20 rounded-md' href="/login">Login</button></a>
+          {/* <button className='logoutButton' onClick={handleLogout}>Logout</button> */}
+        </div>
         <div className='flex flex-row justify-end mr-10 pr-10 gap-5 mt-3'>
           
 
@@ -74,7 +79,7 @@ function Home() {
           </Link> */}
 
           <div className="shadow-2xl">
-            <GoogleLogout
+            {/* <GoogleLogout
                 clientId={clientId}
                 render={renderProps => (
                   <button
@@ -87,7 +92,7 @@ function Home() {
                   </button>
                 )}
                 onLogoutSuccess={onSuccess}
-            />
+            /> */}
           </div>
 
         </div>
@@ -157,17 +162,17 @@ function Home() {
         </h1>
 
         <div className='grid grid-cols-4 mt-10'>
-          <div class='ml-10 w-80 h-76  block rounded-lg border-2 border-neutral-300'>
-            <div class='p-6'>
-              <h5 class='mb-2 text-md font-serif leading-tight dark:text-neutral-500'>
+          <div className='ml-10 w-80 h-76  block rounded-lg border-2 border-neutral-300'>
+            <div className='p-6'>
+              <h5 className='mb-2 text-md font-serif leading-tight dark:text-neutral-500'>
                 Beyond my expectations. Their Vedic chanting and performing the
                 rituals left my guests including french guests spellbound.Thanks
                 a ton🙏
               </h5>
-              <p class='mb-4 text-base font-bold text-neutral-700'>
+              <p className='mb-4 text-base font-bold text-neutral-700'>
                 Rakesh Swain
               </p>
-              <div class=' border-t-2 pl-14'>
+              <div className=' border-t-2 pl-14'>
                 <h1 className='mr-10 mt-3  dark:text-neutral-500'>
                   Pooja performed by,
                 </h1>
@@ -203,17 +208,17 @@ function Home() {
             </div>
           </div>
 
-          <div class='ml-10 w-80 h-76  block rounded-lg border-2 border-neutral-300'>
-            <div class='p-6 '>
-              <h5 class='mb-2 text-md font-serif leading-tight dark:text-neutral-500'>
+          <div className='ml-10 w-80 h-76  block rounded-lg border-2 border-neutral-300'>
+            <div className='p-6 '>
+              <h5 className='mb-2 text-md font-serif leading-tight dark:text-neutral-500'>
                 I contacted for my gruhapravesam pooja, Pandit's were reached
                 home on time as they committed even though it was early morning
                 2:30 am, and all gruhapravesam package programs...
               </h5>
-              <p class='mb-4 text-base font-bold text-neutral-700'>
+              <p className='mb-4 text-base font-bold text-neutral-700'>
                 Ambika Bhoi
               </p>
-              <div class=' border-t-2 px-6 py-2  pl-14'>
+              <div className=' border-t-2 px-6 py-2  pl-14'>
                 <h1 className='mr-10 dark:text-neutral-500'>
                   Pooja performed by,
                 </h1>
@@ -249,17 +254,17 @@ function Home() {
             </div>
           </div>
 
-          <div class='ml-10 w-80 h-76 block rounded-lg border-2 border-neutral-300'>
-            <div class='p-6'>
-              <h5 class='mb-2 text-md font-serif leading-tight dark:text-neutral-500'>
+          <div className='ml-10 w-80 h-76 block rounded-lg border-2 border-neutral-300'>
+            <div className='p-6'>
+              <h5 className='mb-2 text-md font-serif leading-tight dark:text-neutral-500'>
                 A true professional and a dedicated person..Pandit Prabeen Nayak
                 ji... his commitment to the puja was very evident right from the
                 beginning when he took sufficient time to...
               </h5>
-              <p class='mb-4 text-base text-neutral-700 font-bold'>
+              <p className='mb-4 text-base text-neutral-700 font-bold'>
                 Debananda Panda
               </p>
-              <div class=' border-t-2 px-6 py-2  pl-14'>
+              <div className=' border-t-2 px-6 py-2  pl-14'>
                 <h1 className='mr-10 dark:text-neutral-500'>
                   Pooja performed by,
                 </h1>
@@ -295,17 +300,17 @@ function Home() {
             </div>
           </div>
 
-          <div class='ml-10 w-80 h-76  block rounded-lg border-2 border-neutral-300'>
-            <div class='p-6'>
-              <h5 class='mb-2 text-md font-serif leading-tight dark:text-neutral-500'>
+          <div className='ml-10 w-80 h-76  block rounded-lg border-2 border-neutral-300'>
+            <div className='p-6'>
+              <h5 className='mb-2 text-md font-serif leading-tight dark:text-neutral-500'>
                 Lavesh Mishra ji was extremely good natured, humble and soft
                 spoken. He meticulously performed the entire Puja along with a
                 short kathan...
               </h5>
-              <p class='mb-4 text-base text-neutral-700 font-bold'>
+              <p className='mb-4 text-base text-neutral-700 font-bold'>
                 Anita Mohanty
               </p>
-              <div class=' border-t-2 px-6 py-2  pl-14'>
+              <div className=' border-t-2 px-6 py-2  pl-14'>
                 <h1 className='mr-10 dark:text-neutral-500'>
                   Pooja performed by,
                 </h1>
